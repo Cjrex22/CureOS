@@ -47,19 +47,25 @@ CureOS prioritizes a clean, professional, and accessible user experience:
 
 Running CureOS is incredibly simple. It requires no complex server setups, no Maven/Gradle configurations, and no remote database holding.
 
-### Prerequisites:
-1. Java Development Kit (JDK 8 or higher) installed.
-2. The `sqlite-jdbc` JAR file.
+### Running from Terminal (Recommended)
 
-### Steps to Run:
-1. Clone the repository.
-2. Ensure you have a `lib/` directory inside the project folder containing the `sqlite-jdbc.jar` file. (You can download the latest version from Maven Central).
-3. Open a terminal in the root directory of the project.
-4. Run the included bash script:
-   ```bash
-   ./run.sh
-   ```
-   *(Alternatively, you can manually compile and run using `javac` and `java` commands, or simply run `Main.java` via your preferred Java IDE like IntelliJ, Eclipse, or VS Code, ensuring the `lib` folder is added to your project's classpath).*
+1. Clone or download this repository.
+2. Open a terminal (Command Prompt, PowerShell, or macOS Terminal) and navigate to the `cureos2` folder.
+3. Simply execute the included run script:
+
+**macOS / Linux:**
+```bash
+./run.sh
+```
+
+*(Note: If you get a permission denied error, run `chmod +x run.sh` first to make it executable).*
+
+### Running from an IDE (VS Code, IntelliJ, Eclipse)
+Alternatively, you can run CureOS directly from your favorite IDE:
+1. Open the project folder in your IDE.
+2. Ensure the `lib/` folder (which contains `sqlite-jdbc.jar`) is added to your project's **Build Path / Classpath**.
+3. Open `src/Main.java`.
+4. Click the **Run** ▶️ button next to `public static void main(String[] args)`.
 
 ### Default Credentials:
 If you are running the app for the very first time, CureOS automatically seeds the database with three default accounts:
@@ -67,7 +73,7 @@ If you are running the app for the very first time, CureOS automatically seeds t
 - **Receptionist**: `receptionist` / `rec123`
 - **Doctor**: `doctor` / `doc123`
 
-You can immediately use these or create your own via the **Create Account** button.
+You can immediately use these or create your own via the **Create Account** button on the launch screen.
 
 ---
 
